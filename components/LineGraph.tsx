@@ -8,7 +8,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import {
   ChartConfig,
@@ -48,15 +47,15 @@ export default function Component({percentile}:LineChartProps) {
     },
   } satisfies ChartConfig;
 
-  const [activeChart, setActiveChart] =
+  const [activeChart] =
     React.useState<keyof typeof chartConfig>("students");
 
-  const total = React.useMemo(
-    () => ({
-      students: chartData.reduce((acc, curr) => acc + curr.students, 0),
-    }),
-    []
-  );
+  // const total = React.useMemo(
+  //   () => ({
+  //     students: chartData.reduce((acc, curr) => acc + curr.students, 0),
+  //   }),
+  //   []
+  // );
 
   return (
     <Card>

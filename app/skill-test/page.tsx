@@ -82,14 +82,14 @@ import { useState } from "react";
 import html from "@/app/html.png";
 
 // Define prop types for UpdateScores
-type UpdateScoresProps = {
-  rank: number;
-  setRank: React.Dispatch<React.SetStateAction<number>>;
-  percentile: number;
-  setPercentile: React.Dispatch<React.SetStateAction<number>>;
-  score: number;
-  setScore: React.Dispatch<React.SetStateAction<number>>;
-};
+// type UpdateScoresProps = {
+//   rank: number;
+//   setRank: React.Dispatch<React.SetStateAction<number>>;
+//   percentile: number;
+//   setPercentile: React.Dispatch<React.SetStateAction<number>>;
+//   score: number;
+//   setScore: React.Dispatch<React.SetStateAction<number>>;
+// };
 
 export default function SkillTest() {
   const [rank, setRank] = useState<number>(3);

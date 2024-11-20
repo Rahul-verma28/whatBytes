@@ -197,7 +197,7 @@ export default function RedialChart({ score }: RedialChartProps) {
             <RadialBar dataKey="correct" background cornerRadius={10} />
             <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
               <Label
-                content={({ viewBox }: any) => {
+                content={({ viewBox }) => {
                   if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                     return (
                       <text

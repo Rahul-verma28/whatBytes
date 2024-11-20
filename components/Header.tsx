@@ -2,17 +2,12 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-import profileImage from "@/app/ProfilePic.jpg";
 import {
     Award,
   ChartNoAxesColumnDecreasing,
@@ -32,14 +27,8 @@ export default function Header() {
       </div>
       <div className="flex gap-4 items-center">
         <div className="flex gap-2 items-center border rounded-sm px-2 py-1 cursor-pointer">
-          {/* <Image
-            src={profileImage}
-            alt="profile"
-            className=" h-7 w-7 rounded-full"
-          /> */}
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
-            {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
             <AvatarFallback>RV</AvatarFallback>
           </Avatar>
           <span className=" font-bold text-sm">Rahul Verma</span>
