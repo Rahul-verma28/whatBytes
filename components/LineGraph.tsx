@@ -20,7 +20,7 @@ interface LineChartProps {
   percentile: number;
 }
 
-export default function Component({percentile}:LineChartProps) {
+export default function Component({ percentile }: LineChartProps) {
   const chartData = [
     { percentile: 0, students: 0 },
     { percentile: 10, students: 5 },
@@ -47,15 +47,7 @@ export default function Component({percentile}:LineChartProps) {
     },
   } satisfies ChartConfig;
 
-  const [activeChart] =
-    React.useState<keyof typeof chartConfig>("students");
-
-  // const total = React.useMemo(
-  //   () => ({
-  //     students: chartData.reduce((acc, curr) => acc + curr.students, 0),
-  //   }),
-  //   []
-  // );
+  const [activeChart] = React.useState<keyof typeof chartConfig>("students");
 
   return (
     <Card>

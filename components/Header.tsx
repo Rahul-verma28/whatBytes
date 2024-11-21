@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-    Award,
+  Award,
   ChartNoAxesColumnDecreasing,
   Map,
   Menu,
@@ -48,7 +48,6 @@ export default function Header() {
           /> */}
                   <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
-                    {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
                     <AvatarFallback>RV</AvatarFallback>
                   </Avatar>
                   <span className=" font-bold text-lg">Rahul Verma</span>
@@ -66,7 +65,7 @@ export default function Header() {
                   className="flex items-center gap-3 rounded-lg  px-3 py-2 text-muted-foreground hover:bg-muted hover:text-primary"
                   href="/skill-test"
                 >
-                  <Award/>
+                  <Award />
                   Skill Test
                 </Link>
                 <Link

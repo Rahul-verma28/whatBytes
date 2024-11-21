@@ -56,10 +56,10 @@ const SyllabusWise = () => {
   ];
 
   const getProgressColor = (value: number) => {
-    if (value > 80) return "bg-green-500"; // High progress
-    if (value > 60) return "bg-blue-500"; // Moderate progress
-    if (value > 40) return "bg-orange-500"; // Low progress
-    return "bg-red-500"; // Very low progress
+    if (value > 80) return "bg-green-500";
+    if (value > 60) return "bg-blue-500";
+    if (value > 40) return "bg-orange-500"; 
+    return "bg-red-500";
   };
 
   return (
