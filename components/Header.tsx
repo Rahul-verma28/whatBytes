@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sheet,
   SheetClose,
@@ -15,8 +17,11 @@ import {
   Menu,
   StickyNote,
 } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname(); // Get the current path
+
   return (
     <div className="flex justify-between items-center px-6 md:px-8 py-4 border-b">
       <div className="flex items-center gap-1">
@@ -55,21 +60,33 @@ export default function Header() {
               </SheetHeader>
               <nav className="space-y-2">
                 <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground hover:bg-muted hover:text-primary"
+                  className={`flex items-center gap-3 rounded-lg px-3 py-2 ${
+                    pathname === "/"
+                      ? "bg-muted text-violet-500"
+                      : "hover:bg-muted hover:text-violet-500"
+                  }`}
                   href="/"
                 >
                   <ChartNoAxesColumnDecreasing />
                   Dashboard
                 </Link>
                 <Link
-                  className="flex items-center gap-3 rounded-lg  px-3 py-2 text-muted-foreground hover:bg-muted hover:text-primary"
+                  className={`flex items-center gap-3 rounded-lg px-3 py-2 ${
+                    pathname === "/skill-test"
+                      ? "bg-muted text-violet-500"
+                      : "hover:bg-muted hover:text-violet-500"
+                  }`}
                   href="/skill-test"
                 >
                   <Award />
                   Skill Test
                 </Link>
                 <Link
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground hover:bg-muted hover:text-primary"
+                  className={`flex items-center gap-3 rounded-lg px-3 py-2 ${
+                    pathname === "/internship"
+                      ? "bg-muted text-violet-500"
+                      : "hover:bg-muted hover:text-violet-500"
+                  }`}
                   href="/internship"
                 >
                   <StickyNote />

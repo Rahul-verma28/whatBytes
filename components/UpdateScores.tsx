@@ -95,7 +95,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
-        <Button>Update</Button>
+        <Button className=" text-white bg-blue-900 hover:bg-blue-700">Update</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

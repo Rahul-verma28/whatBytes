@@ -53,7 +53,11 @@ export default function SkillTest() {
           </Card>
 
           {/* Quick Statistics */}
-          <QuickStatistics score={score} percentile={percentile} rank={rank} />
+          <QuickStatistics
+            score={score}
+            percentile={percentile}
+            rank={rank}
+          />
 
           {/* Comparision graph */}
           <LineGraph percentile={percentile} />
