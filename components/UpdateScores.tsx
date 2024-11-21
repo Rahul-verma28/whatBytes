@@ -122,7 +122,7 @@
 //                   onChange={(e) => handleChange("rank", e.target.value)}
 //                 />
 //                 {errors.rank && (
-//                   <p className="text-red-500 text-xs">{errors.rank}</p>
+//                   <p className="text-red-400 text-xs">{errors.rank}</p>
 //                 )}
 //               </div>
 //             </div>
@@ -143,7 +143,7 @@
 //                   onChange={(e) => handleChange("percentile", e.target.value)}
 //                 />
 //                 {errors.percentile && (
-//                   <p className="text-red-500 text-xs">{errors.percentile}</p>
+//                   <p className="text-red-400 text-xs">{errors.percentile}</p>
 //                 )}
 //               </div>
 //             </div>
@@ -164,7 +164,7 @@
 //                   onChange={(e) => handleChange("score", e.target.value)}
 //                 />
 //                 {errors.score && (
-//                   <p className="text-red-500 text-xs">{errors.score}</p>
+//                   <p className="text-red-400 text-xs">{errors.score}</p>
 //                 )}
 //               </div>
 //             </div>
@@ -239,7 +239,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
     const newErrors = { rank: "", percentile: "", score: "" };
 
     if (!formValues.rank || isNaN(Number(formValues.rank))) {
-      newErrors.rank = "Required | Rank should be a number.";
+      newErrors.rank = "required | should be a number.";
       isValid = false;
     }
     if (
@@ -248,7 +248,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
       Number(formValues.percentile) < 0 ||
       Number(formValues.percentile) > 100
     ) {
-      newErrors.percentile = "Required | Percentile 0 - 100.";
+      newErrors.percentile = "required | percentile 0 - 100.";
       isValid = false;
     }
     if (
@@ -257,7 +257,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
       Number(formValues.score) < 0 ||
       Number(formValues.score) > 15
     ) {
-      newErrors.score = "Required | Score 0 - 15.";
+      newErrors.score = "required | score 0 - 15.";
       isValid = false;
     }
 
@@ -314,7 +314,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
                   onChange={(e) => handleChange("rank", e.target.value)}
                 />
                 {errors.rank && (
-                  <p className="text-red-500 text-xs">{errors.rank}</p>
+                  <p className="text-red-400 text-xs">{errors.rank}</p>
                 )}
               </div>
             </div>
@@ -336,7 +336,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
                   onChange={(e) => handleChange("percentile", e.target.value)}
                 />
                 {errors.percentile && (
-                  <p className="text-red-500 text-xs">{errors.percentile}</p>
+                  <p className="text-red-400 text-xs">{errors.percentile}</p>
                 )}
               </div>
             </div>
@@ -358,7 +358,7 @@ const UpdateScores: React.FC<UpdateScoresProps> = ({
                   onChange={(e) => handleChange("score", e.target.value)}
                 />
                 {errors.score && (
-                  <p className="text-red-500 text-xs">{errors.score}</p>
+                  <p className="text-red-400 text-xs">{errors.score}</p>
                 )}
               </div>
             </div>
