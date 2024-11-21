@@ -15,6 +15,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { ChartSpline } from "lucide-react";
 
 interface LineChartProps {
   percentile: number;
@@ -35,7 +36,15 @@ export default function Component({ percentile }: LineChartProps) {
     { percentile: 100, students: 1 },
   ];
 
-  const userPercentile = percentile ? Math.round(percentile / 10) * 10 : 30; // Adjusted to the nearest 10
+  const userPercentile = percentile ? Math.round(percentile / 10) * 10 : 30;
+
+  const averagePercentile = 72;
+const comparisonText =
+  percentile < averagePercentile
+    ? `lower than the average percentile ${averagePercentile}% of all the engineers who took this assignment.`
+    : percentile > averagePercentile
+    ? `higher than the average percentile ${averagePercentile}% of all the engineers who took this assignment.`
+    : `equal to the average percentile ${averagePercentile}% of all the engineers who took this assignment.`;
 
   const chartConfig = {
     views: {
@@ -52,13 +61,12 @@ export default function Component({ percentile }: LineChartProps) {
   return (
     <Card>
       <CardHeader>
-        <div className="text-lg font-bold">Comparison Graph</div>
+        <div className=" flex justify-between items-center text-lg font-bold mb-3">Comparison Graph <ChartSpline className="h-12 w-12 p-3 rounded-full bg-gray-50"/></div>
         <CardDescription>
           <span className=" font-semibold text-gray-700">
-            You scored 30% percentile
+            You scored {percentile}% percentile which is
           </span>{" "}
-          which is lower than the average percentile 72% of all the engineers
-          who took this assignment.
+          {comparisonText}
         </CardDescription>
       </CardHeader>
       <CardContent className="px-2 sm:p-6">
